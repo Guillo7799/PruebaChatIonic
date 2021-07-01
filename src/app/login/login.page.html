@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title style="text-align: center">FRIENDSCHAT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="credentialForm">
+    <ion-item>
+      <ion-input
+        placeholder="Correo Electrónico"
+        formControlName="email"
+        autofocus="true"
+        clearInput="true"
+      ></ion-input>
+    </ion-item>
+    <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+      <span *ngIf="email.errors?.required">El correo es obligatorio</span>
+      <span *ngIf="email.errors?.email">Correo Inválido</span>
+    </div>
+    <br />
+
+    <ion-item>
+      <ion-input
+        placeholder="Contraseña"
+        type="password"
+        formControlName="password"
+        clearInput="true"
+      ></ion-input>
+    </ion-item>
+    <div
+      *ngIf="(password.dirty || password.touched) && password.errors"
+      class="errors"
+    >
+      <span *ngIf="password.errors?.required">Este campo es obligatorio</span>
+      <span *ngIf="password.errors?.minlength"
+        >La contraseña debe tener mínimo 5 caracteres</span
+      >
+    </div>
+  </form>
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <ion-button (click)="signIn()" expand="full" color="medium"
+    >Ingresar</ion-button
+  >
+  <ion-button (click)="goToRegisterPage()" expand="full" color="danger"
+    >Registrarme</ion-button
+  >
+</ion-content>
