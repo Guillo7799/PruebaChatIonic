@@ -1,7 +1,7 @@
 ﻿# PruebaChatIonic
 
 INTEGRANTES:
-Jonathan Alquinga
+Jonathan Alquinga y 
 Guillermo Rivera
 
 LINK DEL VIDEO EXPLICANDO FUNCIONALIDAD:
